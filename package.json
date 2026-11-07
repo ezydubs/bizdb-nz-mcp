@@ -1,0 +1,41 @@
+{
+  "name": "bizdb-nz-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for bizdb.co.nz, the free directory of New Zealand companies built from the Companies Office register: search companies by name, NZBN, company number, entity type, industry classification and accredited-employer (AEWV) status, with the site's sorting and paging; read a company's full profile (status, type, registration date, NZBN, GST number, industry codes, current and past addresses with map coordinates, names and status history, contact details, shares and shareholders, ultimate holding company, directors and officers, Charities Register figures, nearby and similar companies); suggest industry classifications; browse the A-Z company index and the newest companies, natively over the site's own pages and XHR endpoints with no browser",
+  "type": "module",
+  "bin": {
+    "bizdb-nz-mcp": "dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "smoke": "npm run build && node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bizdb",
+    "new-zealand",
+    "companies",
+    "companies-office",
+    "nzbn",
+    "directors",
+    "shareholders",
+    "business-directory",
+    "claude"
+  ],
+  "author": "ezydubs",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
